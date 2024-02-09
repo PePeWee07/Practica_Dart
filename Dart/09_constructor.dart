@@ -50,5 +50,4 @@ class Hero {
   String toString() {
     return '$name, $power,  isAlive: ${ isAlive ? 'YES!' : 'NO' }';
   }
-  
 }

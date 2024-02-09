@@ -29,12 +29,13 @@ int addTwoNumbers( int a, int b ) {
 
 int resta(int a, int b) => a - b;
 
-
+// Parametro opcional
 int multiplicacion(int a, int? b) {
   b ??= 0;
   return a * b;
 }
 
+// Parametro opcional con valor por defecto
 int multiplicacion2(int a, [int b=0]) {
   return a * b;
 }

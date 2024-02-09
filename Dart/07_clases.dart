@@ -14,12 +14,12 @@ class Hero {
   String name;
   String power;
   
-  //Primera forma
+  //Primera forma de constructor
   //Hero( String pName, String pPower ): 
   //  this.name = pName,
   //  power = pPower;
   
-  //Segunda Forma
+  //Segunda Forma de constructor
   Hero (  this.name, this.power ); 
   
 }
