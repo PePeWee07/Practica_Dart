@@ -29,6 +29,21 @@ void main() {
            numeroEstudiantes : 50000);
   universidadSalesiana.obtenerInformacion();
   
+  print('\n');
+  
+  //Objeto tipo Map Recivido
+  final Map<String, dynamic> utmachUniversidad = {
+    'Nombre' : 'Universidad Técnica de Machala',
+    'Año fundacion' : 1955,
+    'Carreras' : <String> ['Ciencias de la Comunicación', 'Ciencias de la Educación', 'Ciencias Económicas y Empresariales'],
+    'Numero Estudiantes' : 35100,
+    "Cupos" : 7000,
+    "Ubicacion" : 'Machala'
+  };
+  
+  final UTMACH utmach = UTMACH.personalizado(utmachUniversidad);
+  utmach.obtenerInformacion();
+  
 }
 
 abstract class Universidad {
@@ -129,14 +144,46 @@ class Salesiana implements Universidad {
   
 }
 
-class Panamericana extends Universidad {
+class UTMACH extends Universidad {
   
-  Panamericana.personalizado({
+  int _cupos;
+  String _ubicacion;
+  
+  
+  // Constructor de fábrica
+  factory UTMACH.personalizado(Map<String, dynamic> utmach) => UTMACH(
+      nombre: utmach['Nombre'] ?? 'Datos no econtrados',
+      anioFundacion: utmach['Año fundacion'] ?? 'Datos no econtrados',
+      carreras: List<String>.from(utmach['Carreras'] ?? 'Datos no econtrados'), //aseguramos con .from que se convierta a List de String
+      numeroEstudiantes: utmach['Numero Estudiantes'] ?? 'Datos no econtrados',
+      cupos: utmach['Cupos'] ?? 'Datos no econtrados',
+      ubicacion: utmach['Ubicacion'] ?? 'Datos no econtrados'
+  );
+  
+  
+  // Constructor
+  UTMACH({
     required super.nombre,
     required super.anioFundacion,
     required super.carreras,
-    required super.numeroEstudiantes
-    });
+    required super.numeroEstudiantes,
+    required int cupos,
+    required String ubicacion,
+  }): _cupos = cupos, _ubicacion = ubicacion;
+
+  
+  @override
+  void obtenerInformacion() {
+    print('Nombre de la universidad: $nombre');
+    print('Año de fundación        : $anioFundacion');
+    print('Número de Estudiantes   : $numeroEstudiantes');
+    print('Cupos disponibles.      : $_cupos');
+    print('Ubiaccion               : $_ubicacion');
+    print('---- Carreras ofrecidas ----');
+    for (var carrera in carreras) {
+      print(' - $carrera');
+    }
+  }
   
 }
 
