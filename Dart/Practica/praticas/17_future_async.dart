@@ -14,7 +14,7 @@ Future<String> pedidoCliente() =>
 
 
 //-----------------OTRO JEMPLO-----------------
-void main() async{
+void main2() async{
   
   print('La suma esta calculando...');
   print(await suma());

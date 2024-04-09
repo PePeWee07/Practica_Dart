@@ -21,7 +21,7 @@ void main(){
   
 }
 
-void main() {
+void main2() {
   // Uso de const: El valor se conoce en tiempo de compilación.
   const int edadConst = 20; // La edad es conocida en tiempo de compilación.
   print('Edad constante: $edadConst');
