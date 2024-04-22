@@ -14,19 +14,19 @@ Future<String> pedidoCliente() =>
 
 
 //-----------------OTRO JEMPLO-----------------
-void main2() async{
+// void main2() async{
   
-  print('La suma esta calculando...');
-  print(await suma());
-  suma();
+//   print('La suma esta calculando...');
+//   print(await suma());
+//   suma();
   
-}
+// }
 
-Future<int> suma() async{
-  var laSuma = await sumatoria(3,3);
-  return laSuma;
-}
+// Future<int> suma() async{
+//   var laSuma = await sumatoria(3,3);
+//   return laSuma;
+// }
 
-Future<int> sumatoria(int a, int b) => 
-  Future.delayed(const Duration(seconds: 2), () => (a*b) );
+// Future<int> sumatoria(int a, int b) => 
+//   Future.delayed(const Duration(seconds: 2), () => (a*b) );
 
