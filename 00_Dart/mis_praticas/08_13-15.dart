@@ -10,6 +10,7 @@ Future<void> fetchData() async {
     print('Data fetched successfully: $data');
   } catch (error) {
     print('Error fetching data: $error');
+  // ignore: dead_code_catch_following_catch
   } on TimeoutException {
     print('Request timed out. Please try again later.');
   } catch (error) {

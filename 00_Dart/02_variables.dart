@@ -8,6 +8,7 @@ void main(){
   final List<String> sprites = ['ditto/front.png','ditto/back.png'];
   
   //dynamic  == null
+  // ignore: unused_local_variable
   dynamic errorMessage = 'Hola';
   
   print("""

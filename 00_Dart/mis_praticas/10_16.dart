@@ -10,10 +10,12 @@ void main() {
     print('Subs: $value');
   });
   
+  // ignore: unused_local_variable
   StreamSubscription<int> subs2 = stream.listen((int value){
     print('Subs2: $value');
   });
   
+  // ignore: unused_local_variable
   StreamSubscription<int> subs3 = stream.listen((int value){
     print('Subs3: $value');
   });

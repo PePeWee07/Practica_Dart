@@ -8,6 +8,7 @@ void main() {
   final Stream<int> stream = streamController.stream;
 
   // Nos suscribimos al stream para recibir los datos
+  // ignore: unused_local_variable
   final StreamSubscription<int> subscription = stream.listen(
     (int number) {
       print('Número recibido: $number');
